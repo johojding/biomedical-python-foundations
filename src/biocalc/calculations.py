@@ -1,5 +1,12 @@
 import math
+
 def bmi(weight, height):
+    if not isinstance(weight, (int, float)):
+        raise TypeError("Weight must be input as int or float.")
+    if not isinstance(height, (int, float)):
+        raise TypeError("Height must be input as int or float.")
+    if weight <= 0 or height <= 0:
+        raise ValueError("Height and weight must be positive numbers.")
     bmi_value = weight / (height ** 2)
     return bmi_value
 
