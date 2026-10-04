@@ -41,17 +41,22 @@ def zscore(data_point, mean, std):
     return score
 
 def si_unit_conversion(value, unit):
-    if unit == "inch":
+    if not isinstance(value, (int, float)):
+                raise TypeError("Input value must be int or float.")
+    if not isinstance(unit, str):
+                    raise TypeError("Unit must be str.")
+    if unit.lower == "inch":
         return value * 0.0254
-    elif unit == "foot":
+    elif unit.lower == "foot":
         return value * 0.3048
-    elif unit == "lbs":
+    elif unit.lower == "lbs":
         return value * 0.45359237
-    elif unit == "g":
+    elif unit.lower == "g":
         return value * 0.001
-    elif unit == "cm":
+    elif unit.lower == "cm":
         return value * 0.01
-    return
+    else:
+        raise ValueError("Conversion of that unit does not exist in the function.")
 
 def bmi_range(bmi_value):
     if bmi_value < 18.5:
