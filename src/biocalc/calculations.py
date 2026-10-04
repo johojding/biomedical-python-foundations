@@ -1,23 +1,22 @@
 import math
 def bmi(weight, height):
     bmi_value = weight / (height ** 2)
-
     return bmi_value
 
 def bsa(weight, height, method="mosteller"):
-    bsa_value = None
     if method == "mosteller":
         bsa_value = math.sqrt(height * weight / 3600)
     elif method == "dubois":
         bsa_value = 0.007184 * height ** 0.725 * weight ** 0.425
-    
+    else:
+        return
     return bsa_value
 
 def zscore(data_point, mean, std):
     score = (data_point - mean) / std
     return score
 
-def SI_unit_conversion(value, unit):
+def si_unit_conversion(value, unit):
     if unit == "inch":
         return value * 0.0254
     elif unit == "foot":
@@ -33,9 +32,9 @@ def SI_unit_conversion(value, unit):
 def bmi_range(bmi_value):
     if bmi_value < 18.5:
         return "underweight"
-    elif bmi_value < 24.9:
+    elif bmi_value <= 24.9:
         return "normal"
-    elif bmi_value < 29.9:
+    elif bmi_value <= 29.9:
         return "overweight"
     else:
         return "obese"
