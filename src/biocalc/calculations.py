@@ -29,6 +29,14 @@ def bsa(weight, height, method="mosteller"):
     return bsa_value
 
 def zscore(data_point, mean, std):
+    if not isinstance(data_point, (int, float)):
+                raise TypeError("Input point must be int or float.")
+    if not isinstance(mean, (int, float)):
+                raise TypeError("Mean must be int or float.")
+    if not isinstance(std, (int, float)):
+                raise TypeError("STD must be int or float.")
+    if std <= 0:
+                raise ValueError("STD must be a positive number.")
     score = (data_point - mean) / std
     return score
 
