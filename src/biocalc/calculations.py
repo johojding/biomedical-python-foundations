@@ -11,12 +11,21 @@ def bmi(weight, height):
     return bmi_value
 
 def bsa(weight, height, method="mosteller"):
-    if method == "mosteller":
+    if not isinstance(weight, (int, float)):
+            raise TypeError("Weight must be input as int or float.")
+    if not isinstance(height, (int, float)):
+            raise TypeError("Height must be input as int or float.")
+    if weight <= 0 or height <= 0:
+            raise ValueError("Height and weight must be positive numbers.")
+    if not isinstance(method, str):
+            raise TypeError("Method must be str.")
+    
+    if method.lower == "mosteller":
         bsa_value = math.sqrt(height * weight / 3600)
-    elif method == "dubois":
+    elif method.lower == "dubois":
         bsa_value = 0.007184 * height ** 0.725 * weight ** 0.425
     else:
-        return
+        raise ValueError("Method must be either 'mosteller' or 'dubois'.")
     return bsa_value
 
 def zscore(data_point, mean, std):
