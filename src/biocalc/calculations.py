@@ -20,9 +20,9 @@ def bsa(weight, height, method="mosteller"):
     if not isinstance(method, str):
         raise TypeError("Method must be str.")
     
-    if method.lower == "mosteller":
+    if method.lower() == "mosteller":
         bsa_value = math.sqrt(height * weight / 3600)
-    elif method.lower == "dubois":
+    elif method.lower() == "dubois":
         bsa_value = 0.007184 * height ** 0.725 * weight ** 0.425
     else:
         raise ValueError("Method must be either 'mosteller' or 'dubois'.")
@@ -45,15 +45,15 @@ def si_unit_conversion(value, unit):
         raise TypeError("Input value must be int or float.")
     if not isinstance(unit, str):
         raise TypeError("Unit must be str.")
-    if unit.lower == "inch":
+    if unit.lower() == "inch":
         return value * 0.0254
-    elif unit.lower == "foot":
+    elif unit.lower() == "foot":
         return value * 0.3048
-    elif unit.lower == "lbs":
+    elif unit.lower() == "lbs":
         return value * 0.45359237
-    elif unit.lower == "g":
+    elif unit.lower() == "g":
         return value * 0.001
-    elif unit.lower == "cm":
+    elif unit.lower() == "cm":
         return value * 0.01
     else:
         raise ValueError("Conversion of that unit does not exist in the function.")
