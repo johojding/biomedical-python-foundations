@@ -15,3 +15,7 @@ def bsa(weight, height, method="mosteller"):
         bsa_value = 0.007184 * height ** 0.725 * weight ** 0.425
     
     return bsa_value
+
+def zscore(data_point, mean, std):
+    score = (data_point - mean) / std
+    return score
