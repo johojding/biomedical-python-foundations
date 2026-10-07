@@ -1,4 +1,4 @@
-from biocalc.calculations import bmi, bsa, zscore, si_unit_conversion, bmi_range, bsa_range
+from biocalc import bmi, bsa, zscore, si_unit_conversion, bmi_range, bsa_range
 
 # Patient data
 weight = 65     #kg  
