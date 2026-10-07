@@ -1,5 +1,5 @@
 from pytest import approx, raises
-from biocalc.calculations import bmi, bsa, zscore, si_unit_conversion, bmi_range, bsa_range
+from biocalc import bmi, bsa, zscore, si_unit_conversion, bmi_range, bsa_range
 
 def test_normal_bmi():
     actual = bmi(58, 1.70)
