@@ -27,13 +27,13 @@ All example patient and laboratory data used in this project are synthetic.
 ### Setup
 Clone repository and navigate into the project directory.
 Create a virtual environment:  
-`python -m venv .venv`
+`python -m venv .venv`  
 Activate the virtual environment:  
-`.\.venv\Scripts\Activate`
+`.\.venv\Scripts\Activate`  
 Install the package in editable mode:  
-`python -m pip install -e .`
+`python -m pip install -e .`  
 Install pytest:  
-`python -m pip install pytest`
+`python -m pip install pytest`  
 
 ## Usage
 The functions can be imported directly from the biocalc package:  
