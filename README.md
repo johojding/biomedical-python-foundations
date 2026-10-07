@@ -26,25 +26,25 @@ All example patient and laboratory data used in this project are synthetic.
 
 ### Setup
 Clone repository and navigate into the project directory.
-Create a virtual environment:
-    `python -m venv .venv`
-Activate the virtual environment:
-    `.\.venv\Scripts\Activate`
-Install the package in editable mode:
-    `python -m pip install -e .`
-Install pytest:
-    `python -m pip install pytest`
+Create a virtual environment:  
+`python -m venv .venv`
+Activate the virtual environment:  
+`.\.venv\Scripts\Activate`
+Install the package in editable mode:  
+`python -m pip install -e .`
+Install pytest:  
+`python -m pip install pytest`
 
 ## Usage
-The functions can be imported directly from the biocalc package:
-    `from biocalc import bmi, bsa, zscore, si_unit_conversion, bmi_range, bsa_range`
+The functions can be imported directly from the biocalc package:  
+`from biocalc import bmi, bsa, zscore, si_unit_conversion, bmi_range, bsa_range`
 
 For examples on how to use functions, see `demo.py` under `examples` or run `python.\examples\demo.py`
 
 ## Testing
 The project uses pytest for automated testing.
-Run all tests from the project root:
-    `pytest`
+Run all tests from the project root:  
+`pytest`
 
 The test suite covers normal calculations, invalid inputs, and boundary cases for the package functions.
 
